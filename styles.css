@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+
+:root {
+  --color-primary: #546de5;
+  --color-secondary: #8395e9;
+  --color-secondary-light: rgb(84, 109, 229, .05);
+  --color-dark: #303952;
+  --color-dark-light: #4f576c;
+  --color-light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.menu {
+  display: flex;
+  align-items: flex-start;
+}
+
+.menu .main-menu {
+  width: 60px;
+  min-height: 100vh;
+  background-color: var(--color-dark);
+}
+
+.menu .main-menu .logo {
+  display: flex;
+  padding: 10px;
+}
+
+.menu .main-menu .logo img {
+  width: 40px;
+  margin: 0px auto;
+}
+
+.menu .main-menu .button-list {
+  margin-top: 30px;
+}
+
+.menu .main-menu .button-list .item {
+  display: flex;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.menu .main-menu .button-list .item:hover {
+  background-color: var(--color-dark-light);
+}
+
+.menu .main-menu .button-list .item[active] {
+  background-color: var(--color-primary);
+}
+
+.menu .main-menu .button-list .item i {
+  font-size: 16px;
+  color: var(--color-light);
+  margin: 0px auto;
+  pointer-events: none;
+}
+
+.menu .secondary-menu {
+  width: 0px;
+  min-height: 100vh;
+  background-color: var(--color-light);
+  -webkit-box-shadow: 10px 0px 15px 0px rgba(48,57,82,0.1);
+  -moz-box-shadow: 10px 0px 15px 0px rgba(48,57,82,0.1);
+  box-shadow: 10px 0px 15px 0px rgba(48,57,82,0.1);
+  transition: all .5s;
+}
+
+.menu .secondary-menu .content {
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.menu .secondary-menu[expand] {
+  width: 200px;
+}
+
+.menu .secondary-menu[expand] .content {
+  opacity: 1;
+}
+
+.menu .secondary-menu .content {
+  padding: 20px 0px;
+}
+
+.menu .secondary-menu .content .title {
+  padding: 0px 20px;
+}
+
+.menu .secondary-menu .title span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+.menu .secondary-menu .button-list-title {
+  padding: 20px 20px 10px 20px;
+}
+
+.menu .secondary-menu .button-list-title span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu .secondary-menu .button-list {
+  padding: 20px 0px;
+}
+
+.menu .secondary-menu .button-list .item {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 0px 20px;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.menu .secondary-menu .button-list .item:hover {
+  background-color: var(--color-secondary-light);
+}
+
+.menu .secondary-menu .button-list .item .border-left {
+  height: 100%;
+  border-left: 2px solid var(--color-dark-light);
+  opacity: 0.1;
+  margin-right: 15px;
+  pointer-events: none;
+}
+
+.menu .secondary-menu .button-list .item span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: var(--color-dark-light);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.menu .secondary-menu .button-list .item[active] {
+  background-color: var(--color-light);
+}
+
+.menu .secondary-menu .button-list .item[active] .border-left {
+  border-left-color: var(--color-secondary);
+  opacity: 1;
+}
+
+.menu .secondary-menu .button-list .item[active] span {
+  color: var(--color-secondary);
+  opacity: 1;
+}
